@@ -10,10 +10,6 @@ class UserSchema(BaseModel):
     password: str = Field(min_length=6, max_length=8)
 
 
-class ContactUpdateSchema(UserSchema):
-    pass
-
-
 class UserResponseSchema(BaseModel):
     id: int = 1
     username: str
@@ -28,3 +24,7 @@ class TokenSchema(BaseModel):
     access_token: str
     refresh_token: str
     token_type: str = "bearer"
+
+
+class LogoutResponse(BaseModel):
+    result: str

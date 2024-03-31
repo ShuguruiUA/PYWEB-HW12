@@ -1,7 +1,9 @@
-from datetime import date
+from datetime import date, datetime
 from typing import Optional
 
 from pydantic import BaseModel, EmailStr, Field
+
+from src.schemas.user import UserResponseSchema
 
 
 class ContactSchema(BaseModel):
@@ -25,6 +27,9 @@ class ContactResponseSchema(BaseModel):
     phone: str
     birthday: date
     notes: str
+    created_at: datetime | None
+    updated_at: datetime | None
+    user: UserResponseSchema | None
 
     class Config:
         from_attributes = True
