@@ -7,3 +7,7 @@
     
 ## How to use:
     1. Run your favorite browser and type: localhost:8000/docs
+
+## What's new ?
+    Added authorization. User able to register, login and logout from app.
+    User able to see only those contacts which was created by user, and restricted to see another contacts.
